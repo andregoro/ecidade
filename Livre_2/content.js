@@ -25,12 +25,44 @@
 // });
 
     // 2. A page requested user data, respond with a copy of `user`
+    var login=null;
+    var senha=null;
+    var enter=null;
+    window.addEventListener ("load", myMain, false);
 
+function myMain (evt) {
+    var jsInitChecktimer = setInterval (checkForJS_Finish, 111);
+
+    function checkForJS_Finish () {
+        if (    typeof SOME_GLOBAL_VAR != "undefined"
+            ||  document.querySelector ("SOME_INDICATOR_NODE_css_SELECTOR")
+        ) {
+            clearInterval (jsInitChecktimer);
+            // DO YOUR STUFF HERE.
+        }
+    }
+}
 browser.runtime.onMessage.addListener(function(port) {
     if(port['ecidade']=="sprint"){
-        document.body.style.border = "5px solid red"; 
+
+        login=document.getElementById('usu_login');
+        login.value='suporte02';
+
+        senha=document.getElementById('usu_senha');
+        senha.value='';
+
+        enter=document.getElementById('btnlogar');
+        enter.click();
     }
     if(port['ecidade']=="retaguarda"){
-        document.body.style.border = "5px solid blue";
+
+        login=document.getElementById('usu_login');
+        login.value='andreoliveira';
+        btnlogar
+        senha=document.getElementById('usu_senha');
+        senha.value='15907';
+
+        enter=document.getElementById('btnlogar');
+        enter.click();
     }
 });
