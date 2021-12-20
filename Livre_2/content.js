@@ -66,3 +66,8 @@ browser.runtime.onMessage.addListener(function(port) {
         enter.click();
     }
 });
+
+//id senha 
+
+//id enviar
+//classe btn btn-primary
